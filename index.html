@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework 1</title>
+            <!---This code was written by M Hasibur Rahman and Mohd Wafa-->
+            <link rel="stylesheet" type="text/css" href="style.css" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+            <script src="https://npmcdn.com/leaflet-geometryutil"></script>
+            
+    </head>
+    <body>
+        <nav>
+            <div class="nav-container">
+            <img src="dellogo.png" class="logoar">
+            </div>
+        </nav>
+        <div class="container">
+        <img src="information-icon-white-3.jpg" class="iicon">
+        <h3>No time for going to post-office? Want to deliver items to return without stepping out of your house? <br />
+            Schedule a pickup below!
+            <br />Note: (*) Required fields - can not be left blank
+        </h3>
+        </div>  
+        <section class="container-form">
+            <div class="form-one">
+                <div class="sbmlabel">
+                    <h3>Pick-Up Info:</h3>
+                </div>
+                <div class="inputfield">
+                    <label>*First Name</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="inputfield">
+                    <label>*Last Name</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="inputfield">
+                    <label>*Email</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="inputfield">
+                    <label>*Home Address</label><br />
+                    <img src="https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png"/>
+                    <textarea class="textar" rows="3" cols="50">
+                    </textarea>
+                </div>
+                <div class="inputfield">
+                    <label>*City/Province</label>
+                    <select id="city">
+                        <option>Warsaw/Mazoviecki</option>
+                        <option>Kraków/Małopolska</option>
+                        <option>Lublin/Lublin</option>
+                        <option>Gdańsk/Pomerania</option>
+                      </select>
+                </div>
+                <div class="inputfield">
+                    <label>*Zip code</label>
+                    <input type="text" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000">
+                </div>
+                <div id="mapid">
+                
+                </div>
+                <div class="inputfield">
+                    <label>*Phone Number</label>
+                    <input type="text" class="input" placeholder="+48 100 010 001">
+                </div>
+                <div class="inputfield">
+                    <label>*Pickup date</label>
+                    <input type="date">
+                </div>
+                <div class="inputfield">
+                    <label>*Pickup time constraint</label>
+                    <input type="time">&nbsp; to &nbsp; <input type="time">
+                </div>
+                <div class="Packageinfo">
+                    <h3>Package Info:</h3>
+                </div>
+                <img src="transpbox.png" width="100px" height="100px" class="boximg"/>
+                <div class="inputfield">
+                    <label>*Package dimension <br />(in inches)</label>
+                    <input type="number" class="inputweight" placeholder="Height">
+                    <input type="number" class="inputweight" placeholder="Width">
+                    <input type="number" class="inputweight" placeholder="Length">
+                </div>
+                <div class="inputfield">
+                    <label>*Package weight</label>
+                    <input type="number" class="inputweight">
+                    <select id="weight">
+                        <option>Kg</option>
+                        <option>g</option>
+                        <option>mg</option>
+                        <option>lbs</option>
+                      </select>
+                </div>
+                <div class="inputfield">
+                    <label>*Special Needs:</label>
+                    <select id="priority">
+                        <option>None</option>
+                        <option>Packing Peanuts - 5$</option>
+                        <option>Padded Divider Sets - 10$</option>
+                        <option>Bubble Bags - 6$</option>
+                        <option>Packaging Foam -7$</option>
+                        <option>Packing Paper - 3$</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-two">
+                <div class="delilabel">
+                    <h3>Deliver To:</h3>
+                </div>
+                <div class="inputfield">
+                    <label>*First Name</label>
+                    <input type="text" class="input"  placeholder="Leave blank if commercial">
+                </div>
+                <div class="inputfield">
+                    <label>*Last Name</label>
+                    <input type="text" class="input"  placeholder="Leave blank if commercial">
+                </div>
+                <div class="inputfield">
+                    <label>*Company Name</label>
+                    <input type="text" class="input" placeholder="Leave blank if residential">
+                </div>
+                <div class="inputfield">
+                    <label>*Address</label>
+                    <img src="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"/>
+                    <textarea class="textar" rows="3" cols="50">
+                    </textarea>
+                </div>
+                <div class="inputfield">
+                    <label>*City/Province</label>
+                    <select id="city">
+                        <option>Warsaw/Mazoviecki</option>
+                        <option>Kraków/Małopolska</option>
+                        <option>Lublin/Lublin</option>
+                        <option>Gdańsk/Pomerania</option>
+                      </select>
+                </div>
+                <div class="inputfield">
+                    <label>*Zip code</label>
+                    <input type="text" pattern="[0-9]{2}-[0-9]{3}" placeholder="00-000">
+                </div>
+                <div id="mapspace"></div>
+                <div class="inputfield">
+                    <label>*Phone Number</label>
+                    <input type="text" class="input" placeholder="+48 100 010 001">
+                </div>
+                <div class="inputfield">
+                    <label>*Priority</label>
+                    <select id="priority">
+                        <option>High - Reach on day of Pick-Up</option>
+                        <option>Medium - Reach day after Pick-Up day</option>
+                        <option>Low - Reach within next 5 working days</option>
+                      </select>
+                </div>
+                <div class="inputfield">
+                <label>
+                    Total Distance (in meters):</label> ~<span id="distance"></span>
+                
+                </div>
+                
+                <table class="blueTable" align="center">
+                    <thead>
+                    <tr>
+                    <th>Total Distance(m)</th>
+                    <th>Travel Cost ($)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>~ 5000 - 10000</td>
+                    <td>20</td>
+                    </tr>
+                    <tr>
+                    <td>~ 10000 - 20000</td>
+                    <td>40</td>
+                    </tr>
+                    <tr>
+                    <td>~ 20000 - 40000</td>
+                    <td>60</td>
+                    </tr>
+                    <tr>
+                    <td>~ 40000 - 60000</td>
+                    <td>70</td>
+                    </tr>
+                    <tr>
+                    <td>~ 60000 - 100000</td>
+                    <td>80</td>
+                    </tr>
+                    <tr>
+                    <td>~ 100000 - 140000</td>
+                    <td>100</td>
+                    </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <div>
+            <button type="button">Submit</button>
+            </div>
+          </section>      
+        <script src="styles.js"></script>
+    </body>
+</html>            

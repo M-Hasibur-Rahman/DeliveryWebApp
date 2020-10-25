@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color:#e7e7de;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 6rem;
+  background-color:#008891;
+  position: static;
+  top: 0px;
+  overflow: hidden;
+}
+
+.nav-container {
+  width:80%;
+  max-width:96rem;
+  margin: 0 auto;
+  position: relative;
+  top:-30px;
+
+}
+
+img.logoar {
+  display: block;
+  margin: 1px auto;
+  height: 80px;
+  margin-top:2rem;
+}
+
+img.iicon {
+  display: block;
+  float: left;
+  height: 80px;
+  margin-top: 0.5rem;
+  margin-left: 2.9rem;
+}
+
+.container{
+  width: 91.2%;
+  height: 100px;
+  overflow: hidden;
+  background: #00587a;
+  margin-top: 0px;
+  margin-left: 3.5rem;
+  padding: -6px;
+}
+
+.container h3 {
+  font-family: 'Roboto', sanserif;
+  color: white;
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.container-form {
+  width: 90%;
+  height: 100%;
+  background:white;
+  margin: auto;
+  padding: 8px;
+}
+
+textarea {
+  resize: none;
+}
+
+.boximg {
+  display: block;
+  padding-left: 40%;
+}
+
+.form-one {
+  width: 50%;
+  height: 1020px;
+  background: #e9ffff;
+  float: left;
+}
+
+.form-two {
+  margin-left: 15%;
+  height: 1020px;
+  background: #91ffff;
+}
+
+.form-one .sbmlabel {
+  background:black;
+  width: 100%;
+  height: 25px;
+}
+
+.form-one .sbmlabel  h3 {
+  text-align: center;
+  color:white;
+}
+
+.form-one .Packageinfo {
+  background:darkgrey;
+  width: 100%;
+  height: 25px;
+}
+
+.form-one .Packageinfo  h3 {
+  text-align: center;
+  color:white;
+}
+
+.form-one .inputfield {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  display:flex;
+  align-items: center;
+}
+
+.form-one .inputfield label {
+  width:200px;
+}
+
+.form-one .inputfield .input {
+  width:60%;
+  height: 20px;
+  outline: none;
+  border: 1px solid black;
+  margin-right: 5px;
+}
+
+.form-one .textar {
+  width:55.5%;
+  outline: none;
+  border: 1px solid black;
+  margin-right: 5px;
+  
+}
+
+.inputweight {
+  width:10%;
+  outline: none;
+  border: 1px solid black;
+  margin-right: 2px;
+  
+}
+
+.form-two .textar {
+  width:56.5%;
+  outline: none;
+  border: 1px solid black;
+  margin-right: 5px;
+ 
+}
+
+.form-two .delilabel {
+  background:black;
+  width: 100%;
+  height: 25px;
+}
+
+.form-two .delilabel  h3 {
+  text-align: center;
+  color:white;
+}
+
+.form-two .inputfield {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  display:flex;
+  align-items: center;
+}
+
+.form-two .inputfield label {
+  width:200px;
+  margin-left: 10px;
+}
+
+.form-two .inputfield .input {
+  width:60%;
+  height: 20px;
+  outline: none;
+  border: 1px solid black;
+  margin-right: 5px;;
+}
+
+
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 40%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-left:auto; 
+  margin-right:auto;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.blueTable tbody td {
+  font-size: 13px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  position: static;
+  margin-left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color:  #00587a; 
+  border: 1px;
+  border-color: white;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.form-two #mapspace {
+  width: 58.8%;
+  height: 300px;
+  margin-left: 10px;
+  border-left: black;
+}
+
+#mapid {
+  width: 200%;
+  height: 300px;
+}
+
+
+#distance {
+  margin-left: 30px;
+  background-color: white;
+  size: auto;
+  border-style: dotted;
+  border-color: black;
+  border-radius: 1px;
+}
+
+.distancepayment {
+  margin-left: 10px;
+}
